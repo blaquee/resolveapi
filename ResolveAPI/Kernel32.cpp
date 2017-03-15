@@ -5,7 +5,6 @@
 int PopulateFuncAddr(TCHAR* szDllName, _func_pointers* fp)
 {
 	HMODULE hModule = NULL;
-	PVOID pvFuncAddr = NULL;
 	DWORD dwRetVal = 0;
 
 	hModule = GetModuleHandle(szDllName);
