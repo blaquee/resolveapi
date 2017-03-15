@@ -15,10 +15,10 @@ extern "C"
 }
 const unsigned int num_pointers = 4;
 
-static VIRTUALALLOC _VirtualAlloc = 0;
-static VIRTUALFREE _VirtualFree = 0;
-static VIRTUALPROTECT _VirtualProtect = 0;
-static HEAPCREATE _HeapCreate = 0;
+static VIRTUALALLOC _VirtualAlloc;
+static VIRTUALFREE _VirtualFree;
+static VIRTUALPROTECT _VirtualProtect;
+static HEAPCREATE _HeapCreate;
 
 #pragma pack(push,1)
 typedef struct funcpointers {
