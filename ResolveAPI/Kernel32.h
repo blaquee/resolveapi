@@ -15,7 +15,7 @@ extern "C"
 }
 const unsigned int num_pointers = 4;
 
-static VIRTUALALLOC _VirtualAlloc;
+static VIRTUALALLOC _VirtualAlloc = 0;
 static VIRTUALFREE _VirtualFree = 0;
 static VIRTUALPROTECT _VirtualProtect = 0;
 static HEAPCREATE _HeapCreate = 0;
@@ -35,7 +35,7 @@ static _func_pointers k32_pointers[num_pointers] =
 	{_HeapCreate, "HeapCreate"}
 };
 
-int PopulateFuncAddr(TCHAR* szDllName);
+int PopulateFuncAddr(TCHAR* szDllName, _func_pointers* fp);
 int PopulateKern32();
 void PrintFuncs();
 void* GetFunction(const char* funcName);
